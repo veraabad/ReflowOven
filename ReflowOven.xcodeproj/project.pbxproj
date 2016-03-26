@@ -9,14 +9,18 @@
 /* Begin PBXFileReference section */
 		CBD54C171C8A771D00D032B7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		CBD54C181C8A771D00D032B7 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		CBFDAE171CA35AE1004914FA /* MAX31855.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MAX31855.c; sourceTree = "<group>"; };
+		CBFDAE181CA35AE1004914FA /* MAX31855.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAX31855.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		CBD54C0B1C7694F800D032B7 = {
 			isa = PBXGroup;
 			children = (
-				CBD54C171C8A771D00D032B7 /* main.c */,
+				CBFDAE181CA35AE1004914FA /* MAX31855.h */,
+				CBFDAE171CA35AE1004914FA /* MAX31855.c */,
 				CBD54C181C8A771D00D032B7 /* main.h */,
+				CBD54C171C8A771D00D032B7 /* main.c */,
 			);
 			sourceTree = "<group>";
 		};

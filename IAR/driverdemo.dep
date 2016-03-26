@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>0</fileVersion>
+  <configuration>
+    <name>Debug</name>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\driverdemo.dbg</name>
+      <inputs>
+        <name>$TOOLKIT_DIR$\src\template\cfgm169.xcl</name>
+        <name>$TOOLKIT_DIR$\src\template\cfg3s.xcl</name>
+        <name>$PROJ_DIR$\Debug\Obj\driverdemo.r90</name>
+        <name>$TOOLKIT_DIR$\lib\clib\cl3s-ec-sf.r90</name>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\driverdemo.c</name>
+      <outputs>
+        <name>$PROJ_DIR$\Debug\Obj\driverdemo.r90</name>
+      </outputs>
+      <inputs>
+        <name>$PROJ_DIR$\spi_via_usi_driver.c</name>
+        <name>$TOOLKIT_DIR$\INC\ioavr.h</name>
+        <name>$TOOLKIT_DIR$\INC\iom169.h</name>
+        <name>$TOOLKIT_DIR$\INC\iomacro.h</name>
+        <name>$TOOLKIT_DIR$\INC\inavr.h</name>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <file>
+      <name>$PROJ_DIR$\Release\Exe\driverdemo.a90</name>
+      <inputs>
+        <name>$TOOLKIT_DIR$\src\template\cfgm169.xcl</name>
+        <name>$TOOLKIT_DIR$\src\template\cfg3s.xcl</name>
+        <name>$PROJ_DIR$\Release\Obj\driverdemo.r90</name>
+        <name>$TOOLKIT_DIR$\lib\clib\cl3s-ec-sf.r90</name>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\driverdemo.c</name>
+      <outputs>
+        <name>$PROJ_DIR$\Release\Obj\driverdemo.r90</name>
+      </outputs>
+      <inputs>
+        <name>$PROJ_DIR$\spi_via_usi_driver.c</name>
+        <name>$TOOLKIT_DIR$\INC\ioavr.h</name>
+        <name>$TOOLKIT_DIR$\INC\iom169.h</name>
+        <name>$TOOLKIT_DIR$\INC\iomacro.h</name>
+        <name>$TOOLKIT_DIR$\INC\inavr.h</name>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+
