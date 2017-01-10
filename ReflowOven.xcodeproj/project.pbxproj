@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CBD54C171C8A771D00D032B7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		CBD54C181C8A771D00D032B7 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		CB135E5F1CB4662D00D86FA9 /* softuart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = softuart.c; sourceTree = "<group>"; };
+		CB135E601CB4662D00D86FA9 /* softuart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = softuart.h; sourceTree = "<group>"; };
+		CB4A13EF1CB5D5A900E71E4D /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CBBB00E81CC5ABE9002FC7D6 /* Commands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commands.h; sourceTree = "<group>"; };
+		CBD54C171C8A771D00D032B7 /* ReflowOvenFirmware.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ReflowOvenFirmware.c; sourceTree = "<group>"; };
+		CBD54C181C8A771D00D032B7 /* ReflowOvenFirmware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReflowOvenFirmware.h; sourceTree = "<group>"; };
+		CBD6294A1CB33342008D482A /* Makefile copy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Makefile copy"; sourceTree = "<group>"; };
 		CBFDAE171CA35AE1004914FA /* MAX31855.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MAX31855.c; sourceTree = "<group>"; };
 		CBFDAE181CA35AE1004914FA /* MAX31855.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAX31855.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -17,10 +22,15 @@
 		CBD54C0B1C7694F800D032B7 = {
 			isa = PBXGroup;
 			children = (
+				CB135E5F1CB4662D00D86FA9 /* softuart.c */,
+				CB135E601CB4662D00D86FA9 /* softuart.h */,
 				CBFDAE181CA35AE1004914FA /* MAX31855.h */,
 				CBFDAE171CA35AE1004914FA /* MAX31855.c */,
-				CBD54C181C8A771D00D032B7 /* main.h */,
-				CBD54C171C8A771D00D032B7 /* main.c */,
+				CBD6294A1CB33342008D482A /* Makefile copy */,
+				CBD54C181C8A771D00D032B7 /* ReflowOvenFirmware.h */,
+				CBD54C171C8A771D00D032B7 /* ReflowOvenFirmware.c */,
+				CBBB00E81CC5ABE9002FC7D6 /* Commands.h */,
+				CB4A13EF1CB5D5A900E71E4D /* Makefile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -34,6 +44,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/veraabad/Documents/ReflowOven/ReflowOvenFirmware;
 			dependencies = (
 			);
 			name = ReflowOven;

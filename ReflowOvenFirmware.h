@@ -6,9 +6,11 @@
 //  Copyright © 2016 Abad Vera. All rights reserved.
 //
 
-#ifndef main_h
-#define main_h
+#ifndef ReflowOvenFirmware_h
+#define ReflowOvenFirmware_h
 
-
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/pgmspace.h>
 
 #endif /* main_h */
