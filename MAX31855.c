@@ -90,7 +90,7 @@ long getNegativeTemp(long tempData, long lsb) {
 }
 
 // Parses data and sends back info
-Mx31855_Data readData() {
+Mx31855_Data readData_MAX31855() {
     // Holds info that will be relayed to main program
     Mx31855_Data response;
     response.error = NO_ERROR;
@@ -159,7 +159,9 @@ Mx31855_Data readData() {
     }
     
     response.junctionTemp = jctTemp * 0.0625; // Convert to Celsius
-    
+
+    // Reset done to 0 
+    done = 0; 
     return response;
 }
 

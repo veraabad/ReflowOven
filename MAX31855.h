@@ -29,7 +29,7 @@ typedef struct Mx31855Data_struct {
 }Mx31855_Data;
 
 void Setup_MAX31855(uint8_t csActiveLow); // Using hardware SPI, only need to define if CS is active low or active high
-Mx31855_Data readData(); // Returns all info provided by the MAX31855 including any error codes
+Mx31855_Data readData_MAX31855(); // Returns all info provided by the MAX31855 including any error codes
 
 
 #endif /* MAX31855_h */

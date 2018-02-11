@@ -11,7 +11,7 @@
 
 // List of commands
 #define GET_CMD "GET"
-#defnie SET_CMD "SET"
+#define SET_CMD "SET"
 #define TEMP_CMD "TEMP"
 #define TIME_CMD "TIME"
 #define TIME_S_CMD "TIME_S"
