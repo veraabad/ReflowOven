@@ -1,0 +1,3 @@
+[submodule "software/firmware/avr-softuart"]
+	path = software/firmware/avr-softuart
+	url = https://github.com/blalor/avr-softuart.git
