@@ -1,1 +1,527 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"uin",
+				"uint16_t\tuint16_t"
+			],
+			[
+				"ui",
+				"uint8_t\tuint8_t"
+			],
+			[
+				"MAX",
+				"MAX_CH\tMAX_CH"
+			],
+			[
+				"QZ",
+				"QZSS_ID\tQZSS_ID"
+			],
+			[
+				"LED",
+				"LED_PATCH"
+			],
+			[
+				"UBX",
+				"UBX_SYNC_1\tUBX_SYNC_1"
+			],
+			[
+				"append_to",
+				"append_to_buffer2\tvoid append_to_buffer2(uint8_t *src_arr, uint8_t src_size, uint8_t offset)"
+			],
+			[
+				"src",
+				"src_arr\tuint8_t * src_arr"
+			],
+			[
+				"buf",
+				"buffer\tuint8_t * buffer"
+			],
+			[
+				"ublox",
+				"ublox_payload\tuint8_t * ublox_payload"
+			],
+			[
+				"Rse",
+				"RESERVED\tRESERVED"
+			],
+			[
+				"confi",
+				"config_blk\tuint8_t [8] config_blk"
+			],
+			[
+				"con",
+				"config_blk\tuint8_t [8] config_blk"
+			],
+			[
+				"bu",
+				"buffer\tuint8_t * buffer"
+			],
+			[
+				"GL",
+				"GLONASS_ID\tGLONASS_ID"
+			],
+			[
+				"GPS",
+				"GPS_ID\tGPS_ID"
+			],
+			[
+				"buff",
+				"buffer1\tuint8_t [128] buffer1"
+			],
+			[
+				"set",
+				"set_buffer2\tvoid set_buffer2(uint8_t *src_arr)"
+			],
+			[
+				"buffe",
+				"buffer2\tuint8_t [128] buffer2"
+			],
+			[
+				"chk",
+				"chk_a\tuint8_t chk_a"
+			],
+			[
+				"ubl",
+				"ublox_payload\tuint8_t * ublox_payload"
+			],
+			[
+				"ch",
+				"chk_a\tuint8_t chk_a"
+			],
+			[
+				"add",
+				"add_ublox_checksum\tvoid add_ublox_checksum(uint8_t *ublox_payload, uint16_t byte_length)"
+			],
+			[
+				"Con",
+				"CONFIG_BLOCK_SIZE\tCONFIG_BLOCK_SIZE"
+			],
+			[
+				"GN",
+				"ID_GNSS\tID_GNSS"
+			],
+			[
+				"buffer",
+				"buffer1\tuint8_t [128] buffer1"
+			],
+			[
+				"uint",
+				"uint8_t\tuint8_t"
+			],
+			[
+				"incl",
+				"include\tinclude <header>"
+			],
+			[
+				"inclu",
+				"include\tinclude \"header\""
+			],
+			[
+				"arr",
+				"array1\tuint8_t * array1"
+			],
+			[
+				"strin",
+				"string.h\tstandard header (deprecated)"
+			],
+			[
+				"array",
+				"array2\tuint8_t * array2"
+			],
+			[
+				"siz",
+				"size_array2\tuint8_t size_array2"
+			],
+			[
+				"ena",
+				"enable_byte\tuint8_t enable_byte"
+			],
+			[
+				"includ",
+				"include\tinclude <header>"
+			],
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"file",
+				"file_name\tstatement"
+			],
+			[
+				"log",
+				"log_file\tstatement"
+			],
+			[
+				"Buff",
+				"BufferedRWPair\tclass"
+			],
+			[
+				"Text",
+				"TextIOWrapper\tclass"
+			],
+			[
+				"flush",
+				"flushOutput\tfunction"
+			],
+			[
+				"fl",
+				"flushInput\tfunction"
+			],
+			[
+				"Parit",
+				"PARITY_NONE\tstatement"
+			],
+			[
+				"por",
+				"ports\tstatement"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"GP",
+				"GPIO0"
+			],
+			[
+				"GPIO",
+				"GPIO_PUPD_NONE"
+			],
+			[
+				"gpio",
+				"gpio_mode_setup"
+			],
+			[
+				"Bala",
+				"BalanceStr"
+			],
+			[
+				"bal",
+				"balanceStr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/abadvera/ReflowOven/ReflowOven/software",
+		"/Users/abadvera/ReflowOven/ReflowOven/software/firmware",
+		"/Users/abadvera/ReflowOven/ReflowOven/software/firmware/lib_patches"
+	],
+	"file_history":
+	[
+		"/Users/abadvera/ReflowOven/ReflowOven/.gitmodules",
+		"/Users/abadvera/ReflowOven/ReflowOven/.gitignore",
+		"/Users/abadvera/ReflowOven/ReflowOven/ReflowOvenFirmware.sublime-project",
+		"/Users/abadvera/ReflowOven/ReflowOven/ReflowOvenFirmware.sublime-workspace",
+		"/Users/abadvera/ReflowOven/ReflowOvenFirmware/avr-softuart/.gitignore",
+		"/Users/abadvera/ReflowOven/ReflowOvenFirmware/ReflowOvenFirmware.sublime-project",
+		"/Users/abadvera/ReflowOven/README.md",
+		"/Users/abadvera/ReflowOven/ReflowOvenFirmware/.git/config",
+		"/Users/abadvera/ReflowOven/ReflowOvenFirmware/software/firmware/Makefile",
+		"/Users/abadvera/ReflowOven/Makefile",
+		"/Users/abadvera/ReflowOven/ReflowOvenFirmware/lib_patches/sofuart_patch.patch",
+		"/Users/abadvera/ReflowOven/ReflowOvenMonitor/SerialPortSample.py",
+		"/Users/abadvera/Downloads/zum2.ini",
+		"/Users/abadvera/Downloads/zum.ini",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/serial_py.py",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/abadvera/ZUM/Pi_Mount/home/pi/gps_serial.py",
+		"/Users/abadvera/ZUM/Pi_Mount/home/pi/test.txt",
+		"/Users/abadvera/ZUM/ZUM-1846brd/python/Three_Wire_Spi.py",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/aprs.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/ax25.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/ax25.h",
+		"/Users/abadvera/Downloads/MMDVM-Pi_FW/mmdvm-flasher.bat",
+		"/Users/abadvera/ZUM/stm32flash-code/INSTALL",
+		"/Users/abadvera/Desktop/Archives/ZUM Radio RMA Assignment",
+		"/Users/abadvera/ZUM/stm32flash-code/TODO",
+		"/Users/abadvera/ZUM/stm32flash-code/HOWTO",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/common/gpio_common_f234.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/common/gpio_common_f0234.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/usart.c",
+		"/Users/abadvera/ZUM/MMDVM-Pi_FW_Update.sh",
+		"/etc/ircddbgateway",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/util.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/util.h",
+		"/Users/abadvera/ZUM/ircDDBGateway/Makefile",
+		"/Users/abadvera/Hi.txt",
+		"/Users/abadvera/ZUM/ircDDBGateway/ircDDBGatewayConfig/IRCDDBGatewayConfigApp.cpp",
+		"/Users/abadvera/ZUM/ircDDBGateway/ircDDBGatewayConfig/IRCDDBGatewayConfigApp.h",
+		"/etc/irbrc",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/test.txt",
+		"/Users/abadvera/ZUM/ircDDBGateway/ircDDBGateway/Makefile",
+		"/Users/abadvera/ZUM/MMDVM/LED_patch.patch",
+		"/Users/abadvera/ZUM/mmdvm-pi-info.txt",
+		"/Users/abadvera/ZUM/MMDVM/Config.h",
+		"/Users/abadvera/.ssh/known_hosts",
+		"/Users/abadvera/ZUM/ircDDBGateway/BUILD.txt",
+		"/Users/abadvera/ZUM/ircDDBGateway/Common/DDHandler.cpp",
+		"/Users/abadvera/ZUM/OpenDV/ircDDBGateway/Common/DDHandler.cpp",
+		"/Users/abadvera/ZUM/OpenDV/ircDDBGateway/Makefile",
+		"/Users/abadvera/ZUM/OpenDV/ircDDBGateway/configure",
+		"/Users/abadvera/ZUM/OpenDV/ircDDBGateway/configure.ac",
+		"/Users/abadvera/ZUM/stm32flash-code/configure.ac",
+		"/Users/abadvera/ZUM/stm32flash-code/Makefile.am",
+		"/Users/abadvera/ZUM/stm32flash-code/Makefile",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/test.log",
+		"/Users/abadvera/ZUM/repos/openocd/README.OSX",
+		"/usr/local/share/openocd/scripts/interface/stlink-v2.cfg",
+		"/Users/abadvera/ZUM/repos/openocd/configure.ac",
+		"/usr/local/share/openocd/scripts/interface/stlink-v2-1.cfg",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/ublox.h",
+		"/Users/abadvera/ZUM/MMVM-Pi_FW_Update.sh",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/ethernet/mac_stm32fxx7.c",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h",
+		"/Users/abadvera/ZUM/OpenDV/ircDDBGateway/config",
+		"/Users/abadvera/ZUM/ircDDBGateway/ircDDBGateway/MakefileGUI",
+		"/Users/abadvera/Downloads/Archive/Pi-Star_Config_21-Feb-2019/ircddbgateway",
+		"/Users/abadvera/Downloads/Archive/Pi-Star_Config_21-Feb-2019/dstarrepeater",
+		"/Users/abadvera/Downloads/Archive/Pi-Star_Config_21-Feb-2019/dstar-radio.mmdvmhost",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/config.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/ethernet/mac_stm32fxx7.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/usb/usb_fx07_common.c",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/_types/_uint8_t.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/gps.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/Makefile",
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/common/usart_common_all.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/common/usart_common_all.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/f0/usart.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/f0/usart.h",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/User/ClangAutoComplete.sublime-settings",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/ClangAutoComplete/ClangAutoComplete.sublime-settings",
+		"/Volumes/GoogleDrive/Team Drives/Software/registration.txt",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/common/rcc_common_all.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/common/rcc_common_all.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/cm3/nvic.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/l1/gpio.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/common/usart_common_f124.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/Makefile.include",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/Makefile.rules",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/lm4f/gpio.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/lm4f/gpio.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/feather-make-deploy.sh",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/feather-deploy.sh",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/gps_log_030819_1358.txt",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/.gitignore",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/User/Make-FeatherDeploy.sublime-build",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/gps_log_030819_1314.txt",
+		"/Users/abadvera/Desktop/HamFest Reservation",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/gps.c",
+		"/Users/abadvera/ZUM/repos/MMDVM_HS/configs/ZUMspot_USB.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/stm32/common/gpio_common_all.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/common/gpio_common_all.h",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/User/Make-Feather.sublime-build",
+		"/Users/abadvera/Library/Application Support/Sublime Text 3/Packages/User/Make-FeatherImages.sublime-build",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/untitled.sublime-build",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/si446x.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/sleep.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/delay.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/adc.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/afsk.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/stm32/gpio.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/lib/lm3s/gpio.c",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/libopencm3/include/libopencm3/lm3s/gpio.h",
+		"/Users/abadvera/ZUM/featherhab-firmware-6e868e8ae977/feather.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/usart.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/sleep.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/si446x.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/gps.c",
+		"/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/feather.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/Makefile.rules",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/delay.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/ax25.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/aprs.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/afsk.c",
+		"/Users/abadvera/Downloads/featherhab-firmware-6e868e8ae977/adc.c",
+		"/Users/abadvera/ZUM/repos/MMDVM_HS/Config.h"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Make-FeatherDeploy.sublime-build",
+	"project": "ReflowOvenSoftware.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
