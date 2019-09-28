@@ -1,36 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:My Components
+EESchema Schematic File Version 4
 LIBS:ReflowOven-cache
-EELAYER 25 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -45,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MOC3041M U?
+L ReflowOven-rescue:MOC3041M U?
 U 1 1 567AF18A
 P 8450 4200
 F 0 "U?" H 8250 4400 50  0000 L CNN
@@ -56,7 +26,7 @@ F 3 "" H 8415 4200 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TRIAC U?
+L ReflowOven-rescue:TRIAC U?
 U 1 1 567AF1E1
 P 10000 4650
 F 0 "U?" H 9750 5000 50  0000 C CNN
@@ -67,7 +37,7 @@ F 3 "" H 10000 4650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_B P?
+L ReflowOven-rescue:USB_B P?
 U 1 1 567AF233
 P 1400 3550
 F 0 "P?" H 1600 3350 50  0000 C CNN
@@ -78,7 +48,7 @@ F 3 "" V 1350 3450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L FT232RL U?
+L ReflowOven-rescue:FT232RL U?
 U 1 1 567AF266
 P 5200 5950
 F 0 "U?" H 5200 6000 60  0000 C CNN
@@ -89,7 +59,7 @@ F 3 "" H 5000 5450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX31855 U?
+L ReflowOven-rescue:MAX31855 U?
 U 1 1 567AF29D
 P 5300 1850
 F 0 "U?" H 5450 2100 60  0000 C CNN
@@ -100,7 +70,7 @@ F 3 "" H 5300 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM317T U?
+L ReflowOven-rescue:LM317T U?
 U 1 1 567AF302
 P 1650 5800
 F 0 "U?" H 1450 6000 40  0000 C CNN
@@ -111,7 +81,7 @@ F 3 "" H 1650 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P?
+L ReflowOven-rescue:CONN_01X02 P?
 U 1 1 567AF338
 P 1350 1650
 F 0 "P?" H 1350 1800 50  0000 C CNN
@@ -122,7 +92,7 @@ F 3 "" H 1350 1650 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VR VR?
+L ReflowOven-rescue:VR VR?
 U 1 1 567AF363
 P 3950 6200
 F 0 "VR?" V 4010 6154 50  0000 C TNN
@@ -133,7 +103,7 @@ F 3 "" H 3950 6200 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567AF396
 P 7150 5800
 F 0 "R?" V 7100 5650 60  0000 C CNN
@@ -144,7 +114,7 @@ F 3 "" H 7150 5600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567AF3C6
 P 4300 1650
 F 0 "C?" H 4325 1750 50  0000 L CNN
@@ -155,7 +125,7 @@ F 3 "" H 4300 1650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P?
+L ReflowOven-rescue:CONN_01X02 P?
 U 1 1 567AF6AE
 P 1350 2200
 F 0 "P?" H 1350 2350 50  0000 C CNN
@@ -166,7 +136,7 @@ F 3 "" H 1350 2200 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_02X03 P?
+L ReflowOven-rescue:CONN_02X03 P?
 U 1 1 567AF76E
 P 1350 2800
 F 0 "P?" H 1350 3000 50  0000 C CNN
@@ -177,7 +147,7 @@ F 3 "" H 1350 1600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NMOS_SGD Q?
+L Device:Q_NMOS_SGD Q?
 U 1 1 567AFAC0
 P 7950 4750
 F 0 "Q?" H 8250 4800 50  0000 R CNN
@@ -202,7 +172,7 @@ GND
 Text GLabel 1750 1600 2    60   Input ~ 0
 VDC
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B00D7
 P 1650 1800
 F 0 "#PWR?" H 1650 1550 50  0001 C CNN
@@ -217,7 +187,7 @@ HOT
 Text GLabel 1750 2100 2    60   Input ~ 0
 LOAD
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B03E5
 P 1750 3950
 F 0 "#PWR?" H 1750 3700 50  0001 C CNN
@@ -240,7 +210,7 @@ Text GLabel 3850 2600 2    60   Input ~ 0
 Text GLabel 3600 4050 0    60   Input ~ 0
 GND
 $Comp
-L VR VR?
+L ReflowOven-rescue:VR VR?
 U 1 1 567B0D43
 P 1150 4200
 F 0 "VR?" V 1000 4150 50  0000 C TNN
@@ -251,7 +221,7 @@ F 3 "" H 1150 4200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B1085
 P 4300 6450
 F 0 "C?" H 4325 6550 50  0000 L CNN
@@ -262,7 +232,7 @@ F 3 "" H 4300 6450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P?
+L ReflowOven-rescue:CONN_01X02 P?
 U 1 1 567B11B9
 P 1350 1200
 F 0 "P?" H 1350 1350 50  0000 C CNN
@@ -284,7 +254,7 @@ T-
 Text GLabel 4650 1950 0    60   Input ~ 0
 T+
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B1A59
 P 4300 2000
 F 0 "#PWR?" H 4300 1750 50  0001 C CNN
@@ -295,7 +265,7 @@ F 3 "" H 4300 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X02 P?
+L ReflowOven-rescue:CONN_02X02 P?
 U 1 1 567B1BB3
 P 6500 2000
 F 0 "P?" H 6500 2150 50  0000 C CNN
@@ -372,7 +342,7 @@ Wire Wire Line
 Wire Wire Line
 	1500 3900 1750 3900
 Wire Wire Line
-	1750 3450 1750 3950
+	1750 3450 1750 3900
 Wire Wire Line
 	1700 3450 1750 3450
 Connection ~ 1750 3900
@@ -381,17 +351,17 @@ Wire Wire Line
 Wire Wire Line
 	6100 3450 6550 3450
 Wire Wire Line
-	6100 4050 6450 4050
+	6100 4050 6250 4050
 Wire Wire Line
 	3850 2600 3800 2600
 Wire Wire Line
-	3800 2600 3800 3150
+	3800 2600 3800 2850
 Wire Wire Line
 	3800 2850 4000 2850
 Wire Wire Line
-	3600 4050 4000 4050
+	3600 4050 3800 4050
 Wire Wire Line
-	4200 6200 4450 6200
+	4200 6200 4300 6200
 Wire Wire Line
 	1800 1100 1700 1100
 Wire Wire Line
@@ -407,7 +377,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 1500 4300 1450
 Wire Wire Line
-	4050 1450 4750 1450
+	4050 1450 4300 1450
 Wire Wire Line
 	4750 1650 4450 1650
 Wire Wire Line
@@ -415,7 +385,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 1900 4300 1900
 Wire Wire Line
-	4300 1800 4300 2000
+	4300 1800 4300 1900
 Wire Wire Line
 	4650 1950 4700 1950
 Wire Wire Line
@@ -484,9 +454,9 @@ Text GLabel 1000 4500 0    60   Input ~ 0
 Wire Wire Line
 	1000 4500 1150 4500
 Wire Wire Line
-	1150 4450 1150 4550
+	1150 4450 1150 4500
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B2FC9
 P 3800 4150
 F 0 "#PWR?" H 3800 3900 50  0001 C CNN
@@ -503,7 +473,7 @@ Text GLabel 4050 1450 0    60   Input ~ 0
 3.3V
 Connection ~ 4300 1450
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B3607
 P 4300 6700
 F 0 "#PWR?" H 4300 6450 50  0001 C CNN
@@ -519,7 +489,7 @@ Connection ~ 4300 6200
 Wire Wire Line
 	4300 6600 4300 6700
 $Comp
-L CP1 C?
+L Device:CP1 C?
 U 1 1 567B37FC
 P 1150 4700
 F 0 "C?" H 1175 4800 50  0000 L CNN
@@ -531,7 +501,7 @@ F 3 "" H 1150 4700 60  0000 C CNN
 $EndComp
 Connection ~ 3800 2850
 Wire Wire Line
-	3800 3450 3800 4150
+	3800 3450 3800 4050
 NoConn ~ 4450 5850
 NoConn ~ 4450 5950
 NoConn ~ 5950 6300
@@ -544,7 +514,7 @@ NoConn ~ 5950 5600
 NoConn ~ 5950 5700
 NoConn ~ 5950 5400
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B3D82
 P 5200 7050
 F 0 "#PWR?" H 5200 6800 50  0001 C CNN
@@ -557,9 +527,9 @@ $EndComp
 Wire Wire Line
 	5000 6800 5000 6950
 Wire Wire Line
-	5000 6950 5400 6950
+	5000 6950 5100 6950
 Wire Wire Line
-	5200 6800 5200 7050
+	5200 6800 5200 6950
 Wire Wire Line
 	5400 6950 5400 6800
 Connection ~ 5200 6950
@@ -570,7 +540,7 @@ Wire Wire Line
 	5100 6800 5100 6950
 Connection ~ 5100 6950
 $Comp
-L LED D?
+L ReflowOven-rescue:LED D?
 U 1 1 567B401B
 P 6600 5800
 F 0 "D?" H 6600 5900 50  0000 C CNN
@@ -581,7 +551,7 @@ F 3 "" H 6600 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D?
+L ReflowOven-rescue:LED D?
 U 1 1 567B40D4
 P 6600 6100
 F 0 "D?" H 6600 6200 50  0000 C CNN
@@ -604,7 +574,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 6100 6400 6100
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B44F0
 P 7150 6100
 F 0 "R?" V 7100 5950 60  0000 C CNN
@@ -627,7 +597,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 6100 6800 6100
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B497B
 P 6850 3050
 F 0 "R?" V 6800 2900 60  0000 C CNN
@@ -638,7 +608,7 @@ F 3 "" H 6850 2850 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B49D2
 P 6850 2850
 F 0 "R?" V 6800 2700 60  0000 C CNN
@@ -709,7 +679,7 @@ Wire Wire Line
 NoConn ~ 6100 2850
 NoConn ~ 6100 3750
 $Comp
-L ATTINY84A-P U?
+L ReflowOven-rescue:ATTINY84A-P U?
 U 1 1 567AF157
 P 5050 3450
 F 0 "U?" H 4200 4200 40  0000 C CNN
@@ -724,7 +694,7 @@ NoConn ~ 6100 3950
 Text GLabel 3550 5100 0    60   Input ~ 0
 5V
 Wire Wire Line
-	3550 5100 4450 5100
+	3550 5100 3700 5100
 Wire Wire Line
 	4450 5200 4300 5200
 Wire Wire Line
@@ -736,7 +706,7 @@ Wire Wire Line
 	3950 5650 3950 5100
 Connection ~ 3950 5100
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B59F3
 P 3700 5350
 F 0 "C?" H 3725 5450 50  0000 L CNN
@@ -747,7 +717,7 @@ F 3 "" H 3700 5350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B5AA2
 P 3700 5550
 F 0 "#PWR?" H 3700 5300 50  0001 C CNN
@@ -763,7 +733,7 @@ Connection ~ 3700 5100
 Wire Wire Line
 	3700 5500 3700 5550
 $Comp
-L D D?
+L Device:D D?
 U 1 1 567B5CC8
 P 2500 5950
 F 0 "D?" V 2400 6050 50  0000 C CNN
@@ -774,7 +744,7 @@ F 3 "" H 2500 5950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B6189
 P 9150 4100
 F 0 "R?" V 9100 3950 60  0000 C CNN
@@ -785,7 +755,7 @@ F 3 "" H 9150 3900 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B622E
 P 9100 5250
 F 0 "R?" H 9000 5100 60  0000 C CNN
@@ -796,7 +766,7 @@ F 3 "" H 9100 5050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B6294
 P 10600 4600
 F 0 "R?" H 10450 4550 60  0000 C CNN
@@ -807,7 +777,7 @@ F 3 "" H 10600 4400 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B6300
 P 10600 5150
 F 0 "C?" H 10625 5250 50  0000 L CNN
@@ -818,7 +788,7 @@ F 3 "" H 10600 5150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B6402
 P 8050 3800
 F 0 "R?" H 7950 3650 60  0000 C CNN
@@ -847,7 +817,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 4750 7750 4750
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B6E05
 P 8050 5050
 F 0 "#PWR?" H 8050 4800 50  0001 C CNN
@@ -862,20 +832,20 @@ Wire Wire Line
 Wire Wire Line
 	8850 4100 8750 4100
 Wire Wire Line
-	9400 4100 10850 4100
+	9400 4100 10000 4100
 Wire Wire Line
 	10000 4100 10000 4250
 Wire Wire Line
 	8750 4300 8750 4850
 Wire Wire Line
-	8750 4850 9500 4850
+	8750 4850 9100 4850
 Wire Wire Line
 	9100 4950 9100 4850
 Connection ~ 9100 4850
 Wire Wire Line
 	10000 4900 10000 5600
 Wire Wire Line
-	9100 5600 10850 5600
+	9100 5600 10000 5600
 Wire Wire Line
 	9100 5600 9100 5500
 Wire Wire Line
@@ -893,7 +863,7 @@ LOAD
 Connection ~ 10600 4100
 Connection ~ 10600 5600
 $Comp
-L CP1 C?
+L Device:CP1 C?
 U 1 1 567B8282
 P 800 6000
 F 0 "C?" H 825 6100 50  0000 L CNN
@@ -904,7 +874,7 @@ F 3 "" H 800 6000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B83ED
 P 1050 6000
 F 0 "C?" H 1075 6100 50  0000 L CNN
@@ -915,7 +885,7 @@ F 3 "" H 1050 6000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B84FB
 P 2200 6100
 F 0 "R?" H 2300 5950 60  0000 C CNN
@@ -926,7 +896,7 @@ F 3 "" H 2200 5900 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567B866A
 P 1650 6750
 F 0 "R?" H 1550 6600 60  0000 C CNN
@@ -937,7 +907,7 @@ F 3 "" H 1650 6550 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B8767
 P 2200 6600
 F 0 "C?" H 2225 6700 50  0000 L CNN
@@ -948,7 +918,7 @@ F 3 "" H 2200 6600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C?
+L Device:CP1 C?
 U 1 1 567B88F3
 P 2750 5950
 F 0 "C?" H 2775 6050 50  0000 L CNN
@@ -959,7 +929,7 @@ F 3 "" H 2750 5950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567B8972
 P 3000 5950
 F 0 "C?" H 3025 6050 50  0000 L CNN
@@ -970,7 +940,7 @@ F 3 "" H 3000 5950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 5750 3150 5750
+	2050 5750 2200 5750
 Wire Wire Line
 	3000 5750 3000 5800
 Wire Wire Line
@@ -983,17 +953,17 @@ Wire Wire Line
 	2750 5800 2750 5750
 Connection ~ 2750 5750
 Wire Wire Line
-	2200 6350 2200 6450
+	2200 6350 2200 6400
 Wire Wire Line
-	1650 6050 1650 6450
+	1650 6050 1650 6400
 Wire Wire Line
-	1650 6400 2500 6400
+	1650 6400 2200 6400
 Connection ~ 1650 6400
 Connection ~ 2200 6400
 Wire Wire Line
 	2500 6400 2500 6100
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B964A
 P 2000 7100
 F 0 "#PWR?" H 2000 6850 50  0001 C CNN
@@ -1006,14 +976,14 @@ $EndComp
 Wire Wire Line
 	1650 7000 1650 7050
 Wire Wire Line
-	1650 7050 2200 7050
+	1650 7050 2000 7050
 Wire Wire Line
 	2000 7050 2000 7100
 Wire Wire Line
 	2200 7050 2200 6750
 Connection ~ 2000 7050
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B9888
 P 950 6300
 F 0 "#PWR?" H 950 6050 50  0001 C CNN
@@ -1026,21 +996,21 @@ $EndComp
 Wire Wire Line
 	800  6150 800  6250
 Wire Wire Line
-	800  6250 1050 6250
+	800  6250 950  6250
 Wire Wire Line
 	950  6250 950  6300
 Wire Wire Line
 	1050 6250 1050 6150
 Connection ~ 950  6250
 Wire Wire Line
-	800  5750 1250 5750
+	800  5750 1050 5750
 Wire Wire Line
-	800  5550 800  5850
+	800  5550 800  5750
 Wire Wire Line
 	1050 5850 1050 5750
 Connection ~ 1050 5750
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567B9CA3
 P 2900 6250
 F 0 "#PWR?" H 2900 6000 50  0001 C CNN
@@ -1053,7 +1023,7 @@ $EndComp
 Wire Wire Line
 	2750 6100 2750 6200
 Wire Wire Line
-	2750 6200 3000 6200
+	2750 6200 2900 6200
 Wire Wire Line
 	2900 6200 2900 6250
 Wire Wire Line
@@ -1068,7 +1038,7 @@ Wire Wire Line
 Connection ~ 800  5750
 Connection ~ 3000 5750
 $Comp
-L SW_PUSH SW?
+L ReflowOven-rescue:SW_PUSH SW?
 U 1 1 567C5050
 P 6600 4350
 F 0 "SW?" H 6750 4460 50  0000 C CNN
@@ -1079,7 +1049,7 @@ F 3 "" H 6600 4350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567C510C
 P 7000 4450
 F 0 "#PWR?" H 7000 4200 50  0001 C CNN
@@ -1099,7 +1069,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 4350 6900 4350
 $Comp
-L Resistor R?
+L ReflowOven-rescue:Resistor R?
 U 1 1 567C5420
 P 3650 6550
 F 0 "R?" H 3750 6400 60  0000 C CNN
@@ -1118,7 +1088,7 @@ Wire Wire Line
 Wire Wire Line
 	3650 6900 3500 6900
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 567DD91C
 P 1150 4950
 F 0 "#PWR?" H 1150 4700 50  0001 C CNN
@@ -1132,7 +1102,7 @@ Connection ~ 1150 4500
 Wire Wire Line
 	1150 4850 1150 4950
 $Comp
-L C C?
+L Device:C C?
 U 1 1 567DDB9D
 P 3800 3300
 F 0 "C?" H 3825 3400 50  0000 L CNN
@@ -1142,4 +1112,70 @@ F 3 "" H 3800 3300 60  0000 C CNN
 	1    3800 3300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1750 3900 1750 3950
+Wire Wire Line
+	4300 1900 4300 2000
+Wire Wire Line
+	3800 4050 4000 4050
+Wire Wire Line
+	3800 4050 3800 4150
+Wire Wire Line
+	4300 1450 4750 1450
+Wire Wire Line
+	4300 6200 4450 6200
+Wire Wire Line
+	3800 2850 3800 3150
+Wire Wire Line
+	5200 6950 5300 6950
+Wire Wire Line
+	5200 6950 5200 7050
+Wire Wire Line
+	5300 6950 5400 6950
+Wire Wire Line
+	5100 6950 5200 6950
+Wire Wire Line
+	4300 5100 4450 5100
+Wire Wire Line
+	3950 5100 4300 5100
+Wire Wire Line
+	3700 5100 3950 5100
+Wire Wire Line
+	9100 4850 9500 4850
+Wire Wire Line
+	10000 4100 10600 4100
+Wire Wire Line
+	10000 5600 10600 5600
+Wire Wire Line
+	10600 4100 10850 4100
+Wire Wire Line
+	10600 5600 10850 5600
+Wire Wire Line
+	2200 5750 2500 5750
+Wire Wire Line
+	2500 5750 2750 5750
+Wire Wire Line
+	2750 5750 3000 5750
+Wire Wire Line
+	1650 6400 1650 6450
+Wire Wire Line
+	2200 6400 2200 6450
+Wire Wire Line
+	2200 6400 2500 6400
+Wire Wire Line
+	2000 7050 2200 7050
+Wire Wire Line
+	950  6250 1050 6250
+Wire Wire Line
+	1050 5750 1250 5750
+Wire Wire Line
+	2900 6200 3000 6200
+Wire Wire Line
+	800  5750 800  5850
+Wire Wire Line
+	3000 5750 3150 5750
+Wire Wire Line
+	6250 4050 6450 4050
+Wire Wire Line
+	1150 4500 1150 4550
 $EndSCHEMATC
