@@ -1,9 +1,10 @@
 //
-//  MAX31855.h
-//  ReflowOven
+//  F: MAX31855.h
+//  P: ReflowOven
 //
 //  Created by Abad Vera on 3/23/16.
 //  Copyright © 2016 Abad Vera. All rights reserved.
+//	Last Modified: 09/27/2019
 //
 
 // Code tested on ATtiny84

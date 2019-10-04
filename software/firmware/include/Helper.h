@@ -1,17 +1,17 @@
 //
-//  Helper.h
-//  ReflowOven
+//  F: Helper.h
+//  P: ReflowOven
 //
 //  Created by Abad Vera on 1/20/17.
 //  Copyright © 2017 Abad Vera. All rights reserved.
+//	Last Modified: 10/02/2019
 //
 
 #ifndef Helper_h
 #define Helper_h
 
-//#include <avr/io.h>
+#define ARRAY_NUMBER(x)		(x + 1)
 
-// Take an array of ascii characters and turn them into their integer equivalent
-int asciiToInt( char ints[] );
+//#include <avr/io.h>
 
 #endif /* Helper_h */
