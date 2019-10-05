@@ -36,7 +36,7 @@
 uint64_t startTime = 0;
 
 void testing() {
-    if ((millis() - startTime) > 1500) {
+    if ((millis() - startTime) > 5000UL) {
         softuart_puts_P("\r\n***Test***\r\n");
         PORTA ^= (1 << PA0);
         startTime = millis();
@@ -59,7 +59,7 @@ int main() {
     sei();
     DDRA |= (1 << PA0);
     // PORTA |= (1 << PA0);
-    softuart_puts_P( "\r\nAVR ATtiny84 -- Demo Application\r\n");
+    softuart_puts_P( "\r\nReflow Oven Project -- Testing\r\n");
 
     startTime = millis();
     while(1) {

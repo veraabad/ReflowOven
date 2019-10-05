@@ -23,9 +23,7 @@
 #define TIMER_T_CNT_REGH		TCNT1H
 #define TIMER_T_INTCTL_REG		TIMSK1
 #define TIMER_T_COMP_VECT		TIM1_COMPA_vect
-#define TIMER_10_MICROS			100000UL
-#define TIMER_20_MICROS			MICROS/20
-#define TIMER_XX_MICROS			MICROS/300
+#define TIMER_10_MICROS			(MICROS/10)
 #define TIMER_PRESCALE			8
 #define TIMER_STEP				(MICROS/TIMER_10_MICROS)
 // CLK/8 prescaling
@@ -44,14 +42,14 @@ volatile static uint64_t microsValue = 0;
 
 ISR(TIMER_T_COMP_VECT) {
 	// Store SREG
-	// unsigned char sreg = SREG;
+	unsigned char sreg = SREG;
 
 	// Increment by 10 since we are
 	// triggering every 10 microseconds
-	microsValue += 20;
+	microsValue += TIMER_STEP;
 
 	// Restore SREG
-	// SREG = sreg;
+	SREG = sreg;
 }
 
 void timerInit(void) {
@@ -66,10 +64,11 @@ void timerInit(void) {
 
 	// Set Timer control registers
 	TIMER_T_CONTR_REGA = TIMER_MASKA;
-	TIMER_T_CONTR_REGB = TIMER_MASKB;
+	TIMER_T_CONTR_REGB = (uint8_t)((1 << WGM12) | (1 << CS11));
 	TIMER_T_CONTR_REGC = TIMER_MASKC;
 
 	// Enable compare match interrupt
+	TIMER_T_INTCTL_REG = 0;
 	TIMER_T_INTCTL_REG |= TIMER_CMP_INT_EN_MASK;
 
 	// Clear Timer counter
@@ -81,11 +80,9 @@ void timerInit(void) {
 }
 
 uint64_t micros(void) {
-	// TODO: return micros
 	return microsValue;
 }
 
 uint64_t millis(void) {
-	// TODO: return millis
-	return (microsValue / MILLIS);
+	return (uint64_t)(microsValue / 1000U);
 }
