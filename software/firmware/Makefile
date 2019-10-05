@@ -42,6 +42,7 @@ AVRDUDE = avrdude
 # File paths
 REFLOWOVEN_PATH = .
 UART_LIB_PATH	= $(REFLOWOVEN_PATH)/avr-softuart
+PATCH_PATH		= $(REFLOWOVEN_PATH)/lib_patches
 BIN_DIR = bin
 OBJ_DIR = obj
 
@@ -60,6 +61,10 @@ SOURCES 	= $(wildcard $(REFLOWOVEN_PATH)/*.c)
 UART_OBJ 	= $(UART_LIB:.c=.o)
 OBJECTS 	= $(SOURCES:$(REFLOWOVEN_PATH)/%.c=$(OBJ_DIR)/%.o) $(UART_LIB:$(UART_LIB_PATH)/%.c=$(OBJ_DIR)/%.o)
 HEADERS 	= $(SOURCES:.c=.h)
+
+# Obtain library patches
+PATCH = $(wildcard $(PATCH_PATH)/*.patch)
+PATCHED = $(subst .patch,.patched,$(PATCH))
 
 ## Compilation options, type man avr-gcc if you're curious.
 CPPFLAGS = -DF_CPU=$(F_CPU) -DBAUD=$(BAUD) -I.
@@ -90,6 +95,14 @@ FUSE_STRING = -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m -U efuse:w:$(EFUSE):m
 avr: $(OBJ_DIR)
 avr: $(BIN_DIR)
 avr: $(BIN_DIR)/$(TARGET).hex
+
+$(PATCH_PATH)/%.patched:$(PATCH_PATH)/%.patch
+	@if [ -e $@ ]; then \
+		echo "Libraries Patched"; else \
+		echo "Patching library"; \
+		git submodule foreach git apply "../$<"; \
+		cp $< $@; \
+	fi;
 
 $(OBJ_DIR):
 	mkdir $@
@@ -126,6 +139,8 @@ $(BIN_DIR)/%.hex: $(BIN_DIR)/$(TARGET).elf
 
 all: avr
 
+stage: $(PATCHED)
+
 flash: $(BIN_DIR)/$(TARGET).hex
 	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) -U flash:w:$(BIN_DIR)/$(TARGET).hex
 
@@ -137,6 +152,9 @@ fuses:
 
 clean:
 	rm -f $(BIN_DIR)/$(TARGET).elf $(BIN_DIR)/$(TARGET).hex $(BIN_DIR)/$(TARGET).map $(OBJECTS)
+	rm $(PATCH_PATH)/*.patched
+	# Remove library patches
+	git submodule foreach git reset --hard
 
 debug:
 	@echo
