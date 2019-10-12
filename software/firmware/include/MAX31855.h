@@ -4,7 +4,7 @@
 //
 //  Created by Abad Vera on 3/23/16.
 //  Copyright © 2016 Abad Vera. All rights reserved.
-//	Last Modified: 09/27/2019
+//	Last Modified: 10/10/2019
 //
 
 // Code tested on ATtiny84
@@ -15,9 +15,9 @@
 
 #include <avr/io.h>
 
-#define CS_PIN          PA7
-#define SCK_PIN         PA4
-#define MISO_PIN        PA5         // MOSI is not used for communication with MAX31855
+#define SPI_CS          PA7
+#define SPI_SCK         PA4
+#define SPI_MISO        PA6         // MOSI is not used for communication with MAX31855
 
 enum ErrorCode {
     THERM_OPEN, THERM_SHORT_GND, THERM_SHORT_VCC, NO_COMM, NO_ERROR
@@ -29,8 +29,15 @@ typedef struct Mx31855Data_struct {
     enum ErrorCode error;
 }Mx31855_Data;
 
-void Setup_MAX31855(uint8_t csActiveLow); // Using hardware SPI, only need to define if CS is active low or active high
-Mx31855_Data readData_MAX31855(); // Returns all info provided by the MAX31855 including any error codes
+// Using hardware SPI, only need to define if CS is active low or active high
+void Setup_MAX31855(uint8_t csActiveLow);
 
+// Returns all info provided by the MAX31855 including any error codes
+Mx31855_Data readData_MAX31855();
+
+// Toggle spi clk
+void toggleSpiCLK();
+
+uint8_t* getData();
 
 #endif /* MAX31855_h */

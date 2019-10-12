@@ -4,12 +4,14 @@
 //
 //  Created by Abad Vera on 09/28/2019
 //  Copyright © 2019 Abad Vera. All rights reserved.
-//	Last Modified: 10/04/2019
+//	Last Modified: 10/11/2019
 //
 
 #include "Timer.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <stdbool.h>
+#include "MAX31855.h"
 
 #define MICROS 					1000000UL
 #define MILLIS 					1000U
@@ -35,10 +37,14 @@
 #define TIMER_MASKC				0
 #define TIMER_INIT_CNT_MASK		0
 #define BIT_8_MASK				0x00FF
+
 // Define F_CPU in Makefile
 #define TIMER_TOP 				(F_CPU/TIMER_PRESCALE/TIMER_10_MICROS - 1)
 
 volatile static uint64_t microsValue = 0;
+volatile static uint16_t spiClkValue = 0;
+volatile static uint16_t spiCtr = 0;
+volatile static bool spiON = false;
 
 ISR(TIMER_T_COMP_VECT) {
 	// Store SREG
@@ -47,6 +53,13 @@ ISR(TIMER_T_COMP_VECT) {
 	// Increment by 10 since we are
 	// triggering every 10 microseconds
 	microsValue += TIMER_STEP;
+	// Toggle spi clk
+	if(spiON) {
+		if (--spiCtr == 0) {
+			toggleSpiCLK();
+			spiCtr = spiClkValue;
+		}
+	}
 
 	// Restore SREG
 	SREG = sreg;
@@ -77,6 +90,21 @@ void timerInit(void) {
 
 	// Restore SREG
 	SREG = sreg;
+}
+
+void setSpiClkValue(uint16_t clkValue) {
+	spiClkValue = TIMER_10_MICROS/clkValue;
+}
+
+void startSpiClk() {
+	spiON = true;
+	spiCtr = spiClkValue;
+}
+
+void stopSpiClk() {
+	spiON = false;
+	spiCtr = 0;
+
 }
 
 uint64_t micros(void) {

@@ -4,7 +4,7 @@
 //
 //  Created by Abad Vera on 09/30/2019
 //  Copyright © 2019 Abad Vera. All rights reserved.
-//	Last Modified: 09/30/2019
+//	Last Modified: 10/05/2019
 //
 
 #ifndef Timer_h
@@ -16,5 +16,8 @@
 void timerInit(void);
 uint64_t micros(void);
 uint64_t millis(void);
+void setSpiClkValue(uint16_t clkValue);
+void startSpiClk(void);
+void stopSpiClk(void);
 
 #endif
