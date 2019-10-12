@@ -7,7 +7,6 @@
 MCU   = attiny84
 F_CPU = 16000000UL
 BAUD  = 9600UL
-## Also try BAUD = 19200 or 38400 if you're feeling lucky.
 
 ##########------------------------------------------------------##########
 ##########                 Programmer Defaults                  ##########
@@ -51,10 +50,8 @@ REFLOWOVEN_INC 	= $(REFLOWOVEN_PATH)/include
 INCLUDES 		= $(REFLOWOVEN_INC:%=-I%)
 UART_INCLUDES	= $(UART_LIB_PATH:%=-I%)
 
-## The name of your project (without the .c)
+# Name of the project
 TARGET = ReflowOven
-## Or name it automatically after the enclosing directory
-#TARGET = $(lastword $(subst /, ,$(CURDIR)))
 
 UART_LIB 	= $(wildcard $(UART_LIB_PATH)/*.c)
 SOURCES 	= $(wildcard $(REFLOWOVEN_PATH)/*.c)
@@ -92,10 +89,6 @@ EFUSE = 0xFF
 FUSE_STRING = -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m -U efuse:w:$(EFUSE):m
 
 ## Explicit pattern rules:
-avr: $(OBJ_DIR)
-avr: $(BIN_DIR)
-avr: $(BIN_DIR)/$(TARGET).hex
-
 $(PATCH_PATH)/%.patched:$(PATCH_PATH)/%.patch
 	@if [ -e $@ ]; then \
 		echo "Libraries Patched"; else \
@@ -128,16 +121,23 @@ $(BIN_DIR)/%.hex: $(BIN_DIR)/$(TARGET).elf
 	$(OBJCOPY) -j .text -j .data -O ihex $< $@
 	@echo "Objcopy from ELF to IHEX complete\n"
 
+## No eeprom needed for this project
 #%.eeprom: %.elf
 #	$(OBJCOPY) -j .eeprom --change-section-lma .eeprom=0 -O ihex $< $@
 
-#%.lst: %.elf
-#	$(OBJDUMP) -S $< > $@
+$(BIN_DIR)/$(TARGET).lst: $(BIN_DIR)/$(TARGET).elf
+	$(OBJDUMP) -S $< > $@
 
 ## These targets don’t have files named after them
-.PHONY: all flash fuses clean size
+.PHONY: all flash fuses clean size disasm
+
+avr: $(OBJ_DIR)
+avr: $(BIN_DIR)
+avr: $(BIN_DIR)/$(TARGET).hex
 
 all: avr
+
+disasm: $(BIN_DIR)/$(TARGET).lst
 
 stage: $(PATCHED)
 
@@ -147,11 +147,13 @@ flash: $(BIN_DIR)/$(TARGET).hex
 fuses:
 	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) $(FUSE_STRING)
 
-#show_fuse:
-#	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) -nv
+show_fuse:
+	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) -nv
 
 clean:
 	rm -f $(BIN_DIR)/$(TARGET).elf $(BIN_DIR)/$(TARGET).hex $(BIN_DIR)/$(TARGET).map $(OBJECTS)
+	rm -r $(OBJ_DIR) $(BIN_DIR)
+	rm -f $(BIN_DIR)/$(TARGET).lst
 	rm $(PATCH_PATH)/*.patched
 	# Remove library patches
 	git submodule foreach git reset --hard
