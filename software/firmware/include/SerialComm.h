@@ -4,7 +4,7 @@
 //
 //  Created by Abad Vera on 9/22/19.
 //  Copyright © 2019 Abad Vera. All rights reserved.
-//	Last Modified: 09/30/2019
+//	Last Modified: 10/06/2019
 //
 
 #ifndef SerialComm_h
@@ -25,7 +25,7 @@ typedef enum ERROR_RESPONSE_ENUM {
 	TEMP_ERROR, THERMOCOUPLE_ERROR, SHORT_ERROR, UNDEFINED_REQUEST_ERROR
 } ERROR_RESPONSE;
 
-uint8_t rxBuffer[255];
+uint8_t rxBuffer[125];
 uint8_t txBuffer[50];
 
 void serialProcessPackets(void);

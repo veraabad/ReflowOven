@@ -4,7 +4,7 @@
 //
 //  Created by Abad Vera on 3/4/16.
 //  Copyright © 2016 Abad Vera. All rights reserved.
-//	Last Modified: 10/10/2019
+//	Last Modified: 10/17/2019
 //
 
 // I'm utilizing an ATtiny84 so here's a pinout
@@ -27,6 +27,7 @@
 #include "avr-softuart/softuart.h"
 #include "Timer.h"
 #include "SerialComm.h"
+#include "PWM.h"
 
 uint64_t startTime = 0;
 
@@ -93,6 +94,9 @@ void setup() {
 
 	// Initialize the UART
 	softuart_init();
+
+	// Setup PWM
+	setupPWM();
 
 	// Setup to recognize interrupts
 	sei();

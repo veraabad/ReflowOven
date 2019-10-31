@@ -4,7 +4,7 @@
 //
 //	Created by Abad Vera on 03/23/2016.
 //	Copyright © 2016 Abad Vera. All rights reserved.
-//	Last Modified: 10/11/2019
+//	Last Modified: 10/12/2019
 //
 
 #include "MAX31855.h"
@@ -41,7 +41,6 @@ volatile static char done = 0; // True if fetch is done
 static uint8_t dataArray[4];
 
 void Setup_MAX31855(uint8_t csActiveLow) {
-	// TODO: Flip data pins
 	USI_DIR_REG |= (1<<SPI_SCK) | (1<<SPI_CS); // Set outputs
 	USI_DIR_REG &= ~(1<<SPI_MISO); // Set input
 	USI_OUT_REG |= (1<<SPI_MISO); // Needed only if no external pullup

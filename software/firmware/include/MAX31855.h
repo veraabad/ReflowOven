@@ -4,11 +4,10 @@
 //
 //  Created by Abad Vera on 3/23/16.
 //  Copyright © 2016 Abad Vera. All rights reserved.
-//	Last Modified: 10/10/2019
+//	Last Modified: 10/16/2019
 //
 
 // Code tested on ATtiny84
-// Uses hardware SPI and clock at 4MHz which is clkCPU/2
 
 #ifndef MAX31855_h
 #define MAX31855_h

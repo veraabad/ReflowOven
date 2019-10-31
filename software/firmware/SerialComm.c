@@ -4,7 +4,7 @@
 //
 //  Created by Abad Vera on 09/22/19.
 //  Copyright © 2019 Abad Vera. All rights reserved.
-//	Last Modified: 09/29/2019
+//	Last Modified: 10/11/2019
 //
 
 #include "SerialComm.h"
@@ -17,7 +17,10 @@
 #define LENGTH_PACKET		1
 #define ACK_RESP_LEN		4
 #define NACK_RESP_LEN		5
-#define UINT8_SIZE			sizeof(uint8_t)
+#define UINT8_SIZE			(sizeof(uint8_t))
+#define UINT8_BITS			(UINT8_SIZE * 8)
+#define LONG_SIZE			(sizeof(long))
+#define UINT16_SIZE			(sizeof(uint16_t))
 #define BIT_MASK_8			0xFF
 
 uint8_t ctr = 0;
@@ -68,7 +71,7 @@ void parsePackets() {
 			getValue(TEMP);
 		break;
 		case RO_SET_TEMP:
-			response = setValue(TEMP, rxBuffer[ARRAY_NUMBER(CMD_PACKET)]);
+			response = setValue(TEMP, rxBuffer + ARRAY_NUMBER(CMD_PACKET), packetLength - ARRAY_NUMBER(CMD_PACKET));
 			if (response != 0)
 				sendNACK(response);
 			else
@@ -78,7 +81,7 @@ void parsePackets() {
 			getValue(TIME);
 		break;
 		case RO_SET_TIME:
-			response = setValue(TIME, rxBuffer[ARRAY_NUMBER(CMD_PACKET)]);
+			response = setValue(TIME, rxBuffer + ARRAY_NUMBER(CMD_PACKET), packetLength - ARRAY_NUMBER(CMD_PACKET));
 			if (response != 0)
 				sendNACK(response);
 			else
@@ -137,23 +140,26 @@ void serialProcessPackets() {
 }
 
 void packetHeader(uint8_t c[], uint8_t len, uint8_t cmd, uint8_t *counter) {
-	c[START_BYTE] = RO_START_PACKET;
-	c[LENGTH_BYTE] = len;
-	c[RESPONSE_TYPE] = cmd;
+	c[*counter + START_BYTE] = RO_START_PACKET;
+	c[*counter + LENGTH_BYTE] = len;
+	c[*counter + RESPONSE_TYPE] = cmd;
 	*counter += 3;
 }
 
 void breakdownLong(long value, uint8_t array[], uint8_t *counter) {
-	uint8_t size = sizeof(long) * UINT8_SIZE;
-	for (uint8_t i = size; i > 0; i -= UINT8_SIZE) {
-		array[*counter++] = (uint8_t)(BIT_MASK_8 & (value >> (size - UINT8_SIZE)));
+	uint8_t size = LONG_SIZE / UINT8_SIZE;
+	for (uint8_t i = 0; i < size; i += UINT8_SIZE) {
+		// TODO: Reverse order
+		array[*counter] = (uint8_t)(BIT_MASK_8 & (value >> (i * UINT8_BITS)));
+		*counter += 1;
 	}
 }
 
 void breakdownUINT16(uint16_t value, uint8_t array[], uint8_t *counter) {
-	uint8_t size = sizeof(uint16_t) * UINT8_SIZE;
-	for (uint8_t i = size; i > 0; i -= UINT8_SIZE) {
-		array[*counter++] = (uint8_t)(BIT_MASK_8 & (value >> (size - UINT8_SIZE)));
+	uint8_t size = UINT16_SIZE / UINT8_SIZE;
+	for (uint8_t i = 0; i < size; i +=  UINT8_SIZE) {
+		array[*counter] = (uint8_t)(BIT_MASK_8 & (value >> (i * UINT8_BITS)));
+		*counter += 1;
 	}
 }
 
